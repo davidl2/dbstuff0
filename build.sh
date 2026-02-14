@@ -20,6 +20,8 @@ echo "INSERT INTO log (message) VALUES ('  commit=`git rev-parse HEAD`'); " >>bu
 
 mysql $db <build/build_info.sql
 
+mysql $db <build/create_tables.sql
+
 sleep 5
 
 mysql $db -e "INSERT INTO log (message) VALUES ('End.')"
